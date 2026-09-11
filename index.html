@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cat B 2026 Feasibility — MQ-Based Model (v3, Final Merit List)</title>
+<title>Cat B 2026 Feasibility — MQ-Based Model (v5, Cat B Growth Now Cascades)</title>
 <style>
   :root {
     --ink: #1c1c1c; --muted: #6b6b6b; --line: #e2e2e2;
@@ -82,8 +82,8 @@
 <div class="wrap">
   <div class="header-row">
     <div class="header-left">
-      <h1>Cat B — 2026 Feasibility (MQ-Based Model, v3, Final Merit List)</h1>
-      <p class="subtitle">23 MBBS colleges. Built directly from Management Quota data (2025 Final Merit List, 2025 college-wise allotments, and the 2026 <strong>Final</strong> Merit List) instead of the earlier CQ/qualified-list-based approach. Non-local (NL) candidates are excluded throughout, since they're not real competition for local seats. <strong>New in v3:</strong> switched from the 2026 Provisional Merit List to the 2026 Final Merit List (61 new candidates added statewide, mostly via grievance resolution, none dropped, no score changes among existing candidates). <strong>Important:</strong> S.No positions shifted for candidates after any inserted grievance case &mdash; the same S.No number in v2 and v3 may not be the same candidate. See the methodology section for details on what changed in v2.</p>
+      <h1>Cat B — 2026 Feasibility (MQ-Based Model, v5, Cat B Growth Now Cascades)</h1>
+      <p class="subtitle">23 MBBS colleges. Built directly from Management Quota data (2025 Final Merit List, 2025 college-wise allotments, and the 2026 Final Merit List) instead of the earlier CQ/qualified-list-based approach. Non-local (NL) candidates are excluded throughout, since they're not real competition for local seats. <strong>New in v5:</strong> fixed a real gap found through direct questioning &mdash; each college's own Cat B seat growth previously eased only its own closing, with no propagation to weaker colleges below it in the ranking. Now a college's own Cat B growth (not just Cat A growth) feeds into the cascade chain, so easing at one college can genuinely displace candidates into the next-weaker one, same as it already did for Cat A. A downward-only cascade (top colleges easing weaker ones below them) is the only direction that's logically sound here &mdash; a weaker college gaining seats doesn't make a stronger college above it easier to get into, since that stronger college's own candidate pool is unaffected by seat changes elsewhere. <strong>Defaults changed to None (0%)</strong> for both sliding dropdowns &mdash; the cascade mechanism, while mechanically reasonable, isn't validated against real historical outcomes (only one year of seat-growth data exists), so the page now opens on the most conservative reading: real seat growth only, with none of the speculative cascade/sliding effects applied unless you deliberately choose to add them.</p>
     </div>
     <div class="controls">
       <div>
@@ -104,8 +104,8 @@
       <div>
         <label for="catBtoCatASelect">Cat B&rarr;Cat A sliding</label>
         <select id="catBtoCatASelect">
-          <option value="0">None</option>
-          <option value="25" selected>25%</option>
+          <option value="0" selected>None</option>
+          <option value="25">25%</option>
           <option value="50">50%</option>
           <option value="75">75%</option>
           <option value="100">100% (full modeled)</option>
@@ -114,8 +114,8 @@
       <div>
         <label for="minorityWomenSelect">Min &amp; Women colleges sliding</label>
         <select id="minorityWomenSelect">
-          <option value="0">None</option>
-          <option value="25" selected>25%</option>
+          <option value="0" selected>None</option>
+          <option value="25">25%</option>
           <option value="50">50%</option>
           <option value="75">75%</option>
           <option value="100">100% (full modeled)</option>
@@ -421,8 +421,8 @@ const colleges = [
     "catB_p3_sno": 601,
     "catB_2025_closing_real": 363,
     "seats2025": 44,
-    "seats2026": 60,
-    "catBtoCatAExtensionFull": 292.3,
+    "seats2026": 74,
+    "catBtoCatAExtensionFull": 370.7,
     "minorityExtension": 41.2,
     "catA": {
       "seats2025": 31,
@@ -829,8 +829,8 @@ const colleges = [
     "catB_p3_sno": 1254,
     "catB_2025_closing_real": 316,
     "seats2025": 43,
-    "seats2026": 45,
-    "catBtoCatAExtensionFull": 559.0,
+    "seats2026": 60,
+    "catBtoCatAExtensionFull": 584.0,
     "minorityExtension": 80.7,
     "catA": {
       "seats2025": 25,
@@ -931,8 +931,8 @@ const colleges = [
     "catB_p3_sno": 1351,
     "catB_2025_closing_real": 311,
     "seats2025": 59,
-    "seats2026": 60,
-    "catBtoCatAExtensionFull": 496.3,
+    "seats2026": 74,
+    "catBtoCatAExtensionFull": 521.3,
     "minorityExtension": 74.4,
     "catA": {
       "seats2025": 33,
@@ -1033,8 +1033,8 @@ const colleges = [
     "catB_p3_sno": 1743,
     "catB_2025_closing_real": 287,
     "seats2025": 58,
-    "seats2026": 60,
-    "catBtoCatAExtensionFull": 261.0,
+    "seats2026": 74,
+    "catBtoCatAExtensionFull": 286.0,
     "minorityExtension": 39.1,
     "catA": {
       "seats2025": 20,
