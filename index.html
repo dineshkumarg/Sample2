@@ -83,7 +83,7 @@
   <div class="header-row">
     <div class="header-left">
       <h1>Cat B — 2026 Feasibility (MQ-Based Model, v5, Cat B Growth Now Cascades)</h1>
-      <p class="subtitle">23 MBBS colleges. Built directly from Management Quota data (2025 Final Merit List, 2025 college-wise allotments, and the 2026 Final Merit List) instead of the earlier CQ/qualified-list-based approach. Non-local (NL) candidates are excluded throughout, since they're not real competition for local seats. <strong>New in v5:</strong> fixed a real gap found through direct questioning &mdash; each college's own Cat B seat growth previously eased only its own closing, with no propagation to weaker colleges below it in the ranking. Now a college's own Cat B growth (not just Cat A growth) feeds into the cascade chain, so easing at one college can genuinely displace candidates into the next-weaker one, same as it already did for Cat A. A downward-only cascade (top colleges easing weaker ones below them) is the only direction that's logically sound here &mdash; a weaker college gaining seats doesn't make a stronger college above it easier to get into, since that stronger college's own candidate pool is unaffected by seat changes elsewhere. <strong>Defaults changed to None (0%)</strong> for both sliding dropdowns &mdash; the cascade mechanism, while mechanically reasonable, isn't validated against real historical outcomes (only one year of seat-growth data exists), so the page now opens on the most conservative reading: real seat growth only, with none of the speculative cascade/sliding effects applied unless you deliberately choose to add them.</p>
+      <p class="subtitle">23 MBBS colleges. Built from real Management Quota data (2025 &amp; 2026 Final Merit Lists, 2025 college-wise allotments). Opens on the conservative view by default. Full notes on what this includes and why are below the table.</p>
     </div>
     <div class="controls">
       <div>
@@ -148,6 +148,11 @@
   <p class="summary-line" id="summaryLine"></p>
   <div class="legend" id="legendLine"></div>
   <p class="summary-line" style="margin-top:6px;">Phase scores your entered NEET score clears are <span class="phase-clear">highlighted</span> &mdash; the earliest highlighted phase for a college is the round you'd likely get a seat in. Clearing P3 doesn't guarantee a seat &mdash; the small "~N within 5pts" note shows roughly how many 2025 candidates clustered near that college's real cutoff.</p>
+
+  <div class="refined-note">
+    <h3>About this page</h3>
+    <p style="margin:0;">23 MBBS colleges. Built directly from Management Quota data (2025 Final Merit List, 2025 college-wise allotments, and the 2026 Final Merit List) instead of the earlier CQ/qualified-list-based approach. Non-local (NL) candidates are excluded throughout, since they're not real competition for local seats. <strong>New in v5:</strong> fixed a real gap found through direct questioning &mdash; each college's own Cat B seat growth previously eased only its own closing, with no propagation to weaker colleges below it in the ranking. Now a college's own Cat B growth (not just Cat A growth) feeds into the cascade chain, so easing at one college can genuinely displace candidates into the next-weaker one, same as it already did for Cat A. A downward-only cascade (top colleges easing weaker ones below them) is the only direction that's logically sound here &mdash; a weaker college gaining seats doesn't make a stronger college above it easier to get into, since that stronger college's own candidate pool is unaffected by seat changes elsewhere. <strong>Defaults changed to None (0%)</strong> for both sliding dropdowns &mdash; the cascade mechanism, while mechanically reasonable, isn't validated against real historical outcomes (only one year of seat-growth data exists), so the page now opens on the most conservative reading: real seat growth only, with none of the speculative cascade/sliding effects applied unless you deliberately choose to add them.</p>
+  </div>
 
   <div class="refined-note">
     <h3>What changed from the earlier CQ-based version</h3>
